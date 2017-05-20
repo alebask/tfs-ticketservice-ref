@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tfs-ticketservice-ref extension</title>
+    <script src="lib/VSS.SDK.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        VSS.init({
+            explicitNotifyLoaded: true,
+            usePlatformScripts: true
+        });
+        VSS.require(["scripts/main"], function () {
+            VSS.notifyLoadSucceeded();
+            console.log("tfs-ticketservice-ref extension loaded OK")
+        });
+    </script>
+</body>
+</html>

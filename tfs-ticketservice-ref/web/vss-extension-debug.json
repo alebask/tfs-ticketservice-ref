@@ -1,0 +1,45 @@
+    {
+        "manifestVersion": 1,
+        "id": "tfs-ticketservice-ref-extension-debug",
+        "version": "0.1.0",
+        "name": "Sample tfs calls external web api Extension",
+        "baseUri":  "https://localhost:44339/web",
+        "description": "Sample tfs calls external web api Extension",
+        "publisher": "alexanderbaskakov",
+        "targets": [
+            {
+                "id": "Microsoft.VisualStudio.Services"
+                }
+            ],
+        "icons": {
+            "default": "images/logo.jpg"
+         },
+      "contributions": [
+
+        {
+          "id": "alebaskdev.tfs-externalservice-call-extension",
+          "type": "ms.vss-work-web.work-item-notifications",
+          "description": "Fill current TFS work item with data external service",
+          "targets": [
+            "ms.vss-work-web.work-item-form"
+          ],
+          "properties": {
+            "uri": "index.html"
+          }
+        }
+      ],
+        "scopes": [
+            "vso.work_write"
+        ],
+        "files": [
+            {
+              "path": "index.html", "addressable": true
+            },
+            {
+                "path": "scripts", "addressable": true
+            },
+            {
+                "path": "images/logo.jpg", "addressable": true
+            }
+        ]
+    }

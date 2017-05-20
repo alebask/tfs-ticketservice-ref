@@ -1,0 +1,36 @@
+﻿{
+  "Server": {"Enabled": true},
+  "RootReferencePathMode": "SettingsFileDirectory",
+  "TestHarnessLocationMode": "SettingsFileAdjacent",
+  "TestHarnessReferenceMode": "AMD",
+  "AMDBaseUrl": "lib",
+  "Framework": "jasmine",
+  "EnableTestFileBatching": true,
+  "Compile": {
+    "Mode": "External",
+    "Extensions": [ ".ts" ],
+    "ExtensionsWithNoOutput": [ ".d.ts" ],
+    "UseSourceMaps": true
+  },
+  "References": [
+    {
+      "Path": "lib",
+      "Includes": [ "*.js" ],
+      "IsTestFrameworkFile": true
+    },
+
+    {
+      "Path": "scripts",
+      "Includes": [ "*.ts" ],
+      "Excludes": [ "*Tests*.ts" ],
+      "IncludeInTestHarness": false
+    }
+  ],
+  "Tests": [
+    {
+      "Path": "scripts",
+      "Includes": [ "*Tests*.ts" ],
+      "IncludeInTestHarness": false
+    }
+  ]
+}
